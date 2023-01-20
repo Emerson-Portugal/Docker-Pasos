@@ -22,7 +22,7 @@ docker pull "image":"version"
 docker image rm "imagen"
 ```
 
-## Contenedores en Docker
+## Contenedores en Docker Parte1
 
 > Para listar los contenedores activos
 ```
@@ -49,7 +49,31 @@ docker start "contenedor"
 docker stop "contenedor"
 ``` 
 
-> Para iniciar un contenedor
+> Para eliminar un contenedor
 ```
 docker rm "name_defecto"
+```
+
+## Contenedores en Docker parte2
+
+> Aqui podemos poner el nombre al contenedor
+```
+docker create --name "tu_nombre" "imagen"
+```
+> Empezar el contenedor
+```
+docker start "tu_nombre"
+```
+> Creamos un contenedor con puerto, nombre y distro
+```
+docker create -p"puesto_pc":"puerto_docker" --name "tu_nombre" "imagen"
+```
+> Para comprobar si el contenedor esta activo
+```
+docker logs "tu_nombre"
+```
+
+>>> Este Es el comando TOP, para descargar, crear y ejecutar
+```
+docker run -d --name "tu_nombre" -p"puerto_pc":"puerto_docker" "imagen"
 ```
